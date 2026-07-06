@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>違反勞動相關法令、來臺陸資及工程會拒絕往來廠商比對工具</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">違反勞動相關法令、來臺陸資及工程會拒絕往來廠商比對工具</h1>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="panel">
+        <h2 class="panel-title">
+          『違反勞動法令事業名單』、『公共工程委員會拒絕往來廠商』及『臺陸資名錄』查詢
+        </h2>
+
+        <label class="field">
+          <span>單位名稱</span>
+          <input id="organizationName" type="text" placeholder="請輸入公司名稱" />
+        </label>
+
+        <div class="actions">
+          <button id="queryBtn" type="button" class="btn btn-primary">開始比對</button>
+        </div>
+
+        <section class="settings-box">
+          <p class="settings-title">每月資料更新設定（30 天）</p>
+          <label class="field field-sm">
+            <span>匯入資料夾路徑（可填相對路徑，例如 imports）</span>
+            <input id="importFolderPath" type="text" placeholder="imports" />
+          </label>
+          <div class="settings-row">
+            <button id="refreshBtn" type="button" class="btn btn-secondary">立即更新資料</button>
+            <p id="metaInfo" class="meta-info">載入中…</p>
+          </div>
+          <div id="progressBox" class="progress-box hidden">
+            <p id="progressStage" class="progress-stage"></p>
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressPercent" class="progress-percent"></p>
+          </div>
+        </section>
+
+        <p id="message" class="message hidden"></p>
+        <div id="warnings" class="warnings hidden"></div>
+
+        <div class="results-grid">
+          <section class="result-col">
+            <h3 id="molTitle">勞動部違反勞動法令比對結果（0）</h3>
+            <div id="molResults" class="result-list"></div>
+            <a
+              class="btn btn-link"
+              href="https://announcement.mol.gov.tw/"
+              target="_blank"
+              rel="noreferrer"
+              >點我進入查詢網站</a
+            >
+          </section>
+
+          <section class="result-col">
+            <h3 id="pccTitle">工程會拒絕往來廠商比對結果（0）</h3>
+            <div id="pccResults" class="result-list"></div>
+            <a
+              class="btn btn-link"
+              href="https://web.pcc.gov.tw/vms/rvlm/rvlmPublicSearch/indexSearchRvlmPublic"
+              target="_blank"
+              rel="noreferrer"
+              >點我進入查詢網站</a
+            >
+          </section>
+
+          <section class="result-col">
+            <h3 id="moeaTitle">臺陸資名錄比對結果（0）</h3>
+            <div id="moeaResults" class="result-list"></div>
+            <a
+              class="btn btn-link"
+              href="https://www.moea.gov.tw/Mns/dir/Investment/InvestmentList.aspx?menu_id=42804"
+              target="_blank"
+              rel="noreferrer"
+              >點我進入查詢網站</a
+            >
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

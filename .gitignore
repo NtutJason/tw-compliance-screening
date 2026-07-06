@@ -1,0 +1,33 @@
+# 依賴與建置產物
+node_modules/
+dist/
+
+# 執行時產生的資料（體積大、可重新下載）
+data/
+imports/
+cache.json
+
+# 環境與機密
+.env
+.env.*
+
+# 日誌與暫存
+*.log
+_moea-curl-cookies.txt
+
+# 系統檔
+.DS_Store
+Thumbs.db
+
+# Cursor / IDE（勿上傳對話、規則快取）
+.cursor/
+.cursorrules
+*.cursor
+agent-transcripts/
+.cursorignore
+
+# 編輯器（可選）
+.vscode/
+.idea/
+*.swp
+*~

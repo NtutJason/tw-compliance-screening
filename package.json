@@ -1,0 +1,60 @@
+{
+  "name": "tw-compliance-screening",
+  "version": "1.0.0",
+  "description": "違反勞動相關法令、來臺陸資及工程會拒絕往來廠商比對工具",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "tw-compliance-screening": "./tw-compliance-screening.mjs"
+  },
+  "files": [
+    "dist",
+    "src",
+    "ui",
+    "tw-compliance-screening.mjs",
+    "scripts/fetch-compliance-files.mjs",
+    "README.md",
+    "INTEGRATION.md",
+    "SECURITY.md",
+    "config.example.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "fetch": "node scripts/fetch-compliance-files.mjs",
+    "cli": "node tw-compliance-screening.mjs",
+    "ui": "node ui/server.mjs",
+    "start": "node ui/server.mjs",
+    "security-test": "node scripts/security-smoke-test.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NtutJason/tw-compliance-screening.git"
+  },
+  "keywords": [
+    "taiwan",
+    "compliance",
+    "labor-law",
+    "moea",
+    "pcc",
+    "screening"
+  ]
+}

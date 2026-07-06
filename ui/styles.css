@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #bae6fd;
+}
+
+.header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c4a6e;
+}
+
+.site-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.page-main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #bae6fd;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.field-sm {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.field input {
+  border: 1px solid #bae6fd;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #0c4a6e;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #0369a1;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #075985;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: #7dd3fc;
+}
+
+.btn-link {
+  margin-top: 0.75rem;
+  background: #0369a1;
+  color: #fff;
+}
+
+.btn-link:hover {
+  background: #075985;
+  color: #fff;
+}
+
+.settings-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #bae6fd;
+  border-radius: 0.75rem;
+  background: #f0f9ff;
+}
+
+.settings-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.settings-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.meta-info {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.progress-box {
+  margin-top: 0.75rem;
+}
+
+.progress-stage {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.progress-bar {
+  margin-top: 0.5rem;
+  height: 0.5rem;
+  background: #e0f2fe;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 5%;
+  background: #0284c7;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.progress-percent {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #0369a1;
+}
+
+.warnings {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #fcd34d;
+  border-radius: 0.5rem;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+}
+
+.warnings a {
+  color: #78350f;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.results-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.result-col {
+  border: 1px solid #bae6fd;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 1rem;
+}
+
+.result-col h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0c4a6e;
+}
+
+.result-list {
+  margin-top: 0.75rem;
+}
+
+.result-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.result-card p {
+  margin: 0;
+}
+
+.result-empty {
+  font-size: 0.875rem;
+  color: #334155;
+}
